@@ -4,7 +4,7 @@ const initialState = {
 }
 
 export const reducers = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ADD_LAUNCHES':
       return { launches: [...action.payload] }
       break

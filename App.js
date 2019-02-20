@@ -10,7 +10,7 @@ import { reducers } from './store/reducers'
 
 const MainNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
-  Launch: { screen: LaunchScreen },
+  Launch: { screen: LaunchScreen }
 })
 const AppContainer = createAppContainer(MainNavigator)
 
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <View style={{flex: 1}}>
+        <View style={{ flex: 1 }}>
           <AppContainer />
         </View>
       </Provider>

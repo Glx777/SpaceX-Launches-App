@@ -5,10 +5,10 @@ import { styles } from './styles'
 
 const Logo = () => {
   return (
-    <View>
+    <View style={styles.imageContainer}>
       <Image
         alt="Logo"
-        resizeMode="stretch"
+        resizeMode="contain"
         style={styles.image}
         source={require('../../assets/images/SpaceX-Logo.svg.png')}
       />

@@ -10,7 +10,9 @@ import { styles } from './styles'
 
 class LaunchItem extends Component {
   changeScreen = id => {
-    this.props.navigation.navigate('Launch')
+    this.props.navigation.navigate('Launch', {
+      title: `Launch №${id}`
+    })
     this.props.dispatch(chooseLaunch(id))
   }
 

@@ -10,9 +10,9 @@ import LaunchLogo from '../../components/LaunchLogo'
 import { styles } from './styles'
 
 class LaunchScreen extends Component {
-  static navigationOptions = {
-    title: 'Launch'
-  }
+  static navigationOptions = ({ navigation }) => ({
+    title: `${navigation.state.params.title}`
+  })
 
   render() {
     const { launch } = this.props

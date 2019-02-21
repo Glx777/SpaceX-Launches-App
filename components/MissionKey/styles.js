@@ -1,13 +1,13 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: Dimensions.get('window').width,
     marginTop: '4%',
     marginBottom: '4%'
   },
   heading: {
-    fontSize: 40,
+    fontSize: Dimensions.get('window').width * 0.08,
     color: '#222',
     alignSelf: 'center'
   },

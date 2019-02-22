@@ -10,7 +10,7 @@ const Logo = () => {
         alt="Logo"
         resizeMode="contain"
         style={styles.image}
-        source={require('../../assets/images/SpaceX-Logo.svg.png')}
+        source={require('../../../assets/images/SpaceX-Logo.svg.png')}
       />
     </View>
   )

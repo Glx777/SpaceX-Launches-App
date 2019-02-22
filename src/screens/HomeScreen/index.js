@@ -12,10 +12,6 @@ import Logo from '../../components/Logo'
 import { styles } from './styles'
 
 class HomeScreen extends Component {
-  static navigationOptions = {
-    title: 'Home'
-  }
-
   constructor() {
     super()
     this.state = {

@@ -2,7 +2,7 @@ import React from 'react'
 import { TouchableOpacity, Image, Linking } from 'react-native'
 import PropTypes from 'prop-types'
 
-import { styles } from './styles'
+import { styles } from '../styles'
 
 const WebsiteIcon = ({ link }) => {
   return (
@@ -14,7 +14,7 @@ const WebsiteIcon = ({ link }) => {
       <Image
         style={styles.image}
         resizeMode="contain"
-        source={require('../../../assets/images/website-icon.png')}
+        source={require('../../../../assets/images/website-icon.png')}
       />
     </TouchableOpacity>
   )

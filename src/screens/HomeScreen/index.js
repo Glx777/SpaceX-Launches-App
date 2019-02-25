@@ -27,7 +27,7 @@ class HomeScreen extends Component {
   }
 
   render() {
-    const { launches } = this.props
+    const { launches, navigation } = this.props
     const { isLoading } = this.state
     return (
       <View style={styles.container}>
@@ -39,7 +39,7 @@ class HomeScreen extends Component {
           <ScrollView style={{ width: '100%' }}>
             {launches.map(launch => (
               <LaunchItem
-                navigation={this.props.navigation}
+                navigation={navigation}
                 launch={launch}
                 key={launch.flight_number}
               />

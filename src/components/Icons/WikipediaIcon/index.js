@@ -2,9 +2,9 @@ import React from 'react'
 import { TouchableOpacity, Image, Linking } from 'react-native'
 import PropTypes from 'prop-types'
 
-import { styles } from './styles'
+import { styles } from '../styles'
 
-const TwitterIcon = ({ link }) => {
+const WikipediaIcon = ({ link }) => {
   return (
     <TouchableOpacity
       activeOpacity={0.8}
@@ -14,14 +14,14 @@ const TwitterIcon = ({ link }) => {
       <Image
         style={styles.image}
         resizeMode="contain"
-        source={require('../../../assets/images/twitter-icon.png')}
+        source={require('../../../../assets/images/wikipedia-icon.png')}
       />
     </TouchableOpacity>
   )
 }
 
-TwitterIcon.propTypes = {
+WikipediaIcon.propTypes = {
   link: PropTypes.string.isRequired
 }
 
-export default TwitterIcon
+export default WikipediaIcon

@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center'
   },
   wrapper: {
-    width: '98%'
+    width: '98%',
+    marginTop: 10
   },
   missionName: {
     color: '#222',
@@ -14,6 +15,9 @@ export const styles = StyleSheet.create({
   },
   smallHeading: {
     color: '#222',
-    fontSize: 18
+    fontSize: 28,
+    alignSelf: 'center',
+    marginTop: 10,
+    marginBottom: 10
   }
 })

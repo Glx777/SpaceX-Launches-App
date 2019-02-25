@@ -18,12 +18,8 @@ class LaunchItem extends Component {
 
   render() {
     const {
-      launch_date_local,
-      mission_name,
-      launch_success,
-      flight_number
-    } = this.props.launch
-    const date = moment(launch_date_local).format('MMMM Do YYYY, h:mm:ss a')
+      launch: { launch_date_local, mission_name, launch_success, flight_number }
+    } = this.props
     return (
       <View style={styles.container}>
         <Text style={styles.missionName}>
@@ -34,7 +30,9 @@ class LaunchItem extends Component {
             {mission_name}
           </Text>
         </Text>
-        <Text style={styles.date}>Date: {date}</Text>
+        <Text style={styles.date}>
+          Date: {moment(launch_date_local).format('MMMM Do YYYY, h:mm:ss a')}
+        </Text>
         <TouchableOpacity
           activeOpacity={0.6}
           style={styles.button}
@@ -48,20 +46,9 @@ class LaunchItem extends Component {
 }
 
 LaunchItem.propTypes = {
-  launch_date_local: PropTypes.string,
-  mission_name: PropTypes.string,
-  launch_success: PropTypes.bool,
-  flight_number: PropTypes.number,
   navigation: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
   launch: PropTypes.object.isRequired
-}
-
-LaunchItem.defaultProps = {
-  launch_date_local: '',
-  mission_name: '',
-  launch_success: false,
-  flight_number: 0
 }
 
 export default connect(null)(LaunchItem)

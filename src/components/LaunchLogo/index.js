@@ -6,7 +6,7 @@ import { styles } from './styles'
 
 const LaunchLogo = ({ links: { mission_patch } }) => {
   return (
-    <View style={{ width: '100%' }}>
+    <View style={{ width: '100%', marginTop: 10 }}>
       <Image
         style={styles.image}
         resizeMode="stretch"

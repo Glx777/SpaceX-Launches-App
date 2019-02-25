@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { ScrollView, View, Text } from 'react-native'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -15,19 +15,23 @@ class LaunchScreen extends Component {
   })
 
   render() {
-    const { launch } = this.props
-    const { rocket, links } = launch
+    const {
+      launch: { mission_name, rocket, links },
+      launch
+    } = this.props
     return (
-      <View style={styles.container}>
-        <LaunchLogo links={links} />
-        <View style={styles.wrapper}>
-          <Text style={styles.missionName}>Mission: {launch.mission_name}</Text>
-          <Text style={styles.smallHeading}>Launch Details</Text>
-          <LaunchDetails launch={launch} />
-          <Text style={styles.smallHeading}>Rocket Details</Text>
-          <RocketDetails rocket={rocket} />
+      <ScrollView style={{ flex: 1 }}>
+        <View style={styles.container}>
+          <LaunchLogo links={links} />
+          <View style={styles.wrapper}>
+            <Text style={styles.missionName}>Mission: {mission_name}</Text>
+            <Text style={styles.smallHeading}>Launch Details</Text>
+            <LaunchDetails launch={launch} />
+            <Text style={styles.smallHeading}>Rocket Details</Text>
+            <RocketDetails rocket={rocket} />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }

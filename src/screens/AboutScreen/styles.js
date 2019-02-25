@@ -5,21 +5,20 @@ export const styles = StyleSheet.create({
     flex: 1
   },
   spinner: {
-    marginTop: Dimensions.get('window').height * 0.3
+    marginTop: Dimensions.get('window').height * 0.4
   },
   wrapper: {
-    marginLeft: Dimensions.get('window').width * 0.02
+    marginLeft: 10
   },
   row: {
-    marginTop: Dimensions.get('window').height * 0.02,
-    paddingBottom: Dimensions.get('window').height * 0.02,
+    marginTop: 10,
+    marginBottom: 10,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
   text: {
-    marginTop: Dimensions.get('window').height * 0.01,
-    fontSize: Dimensions.get('window').height * 0.03,
-    lineHeight: Dimensions.get('window').height * 0.04
+    fontSize: 20,
+    lineHeight: 30
   }
 })

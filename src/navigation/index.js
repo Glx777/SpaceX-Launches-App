@@ -10,6 +10,7 @@ import HomeScreen from '../screens/HomeScreen'
 import LaunchScreen from '../screens/LaunchScreen'
 import AboutScreen from '../screens/AboutScreen'
 import MissionsScreen from '../screens/MissionsScreen'
+import MissionScreen from '../screens/MissionScreen'
 
 const HomeScreenStack = createStackNavigator({
   Home: {
@@ -36,6 +37,12 @@ const MissionsScreenStack = createStackNavigator({
     navigationOptions: {
       title: 'Missions'
     }
+  },
+  Mission: {
+    screen: MissionScreen,
+    navigationOptions: {
+      title: 'Mission'
+    }
   }
 })
 
@@ -45,7 +52,7 @@ const MainNavigator = createBottomTabNavigator({
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: ({ tintColor }) => (
-        <Icon name="home" size={20} color={tintColor} />
+        <Icon name="home" size={30} color={tintColor} />
       )
     }
   },

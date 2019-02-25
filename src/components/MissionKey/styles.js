@@ -3,11 +3,10 @@ import { StyleSheet, Dimensions } from 'react-native'
 export const styles = StyleSheet.create({
   container: {
     width: Dimensions.get('window').width,
-    marginTop: '4%',
-    marginBottom: '4%'
+    paddingBottom: 10
   },
   heading: {
-    fontSize: Dimensions.get('window').width * 0.08,
+    fontSize: 30,
     color: '#222',
     alignSelf: 'center'
   },

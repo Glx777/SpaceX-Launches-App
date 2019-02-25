@@ -2,9 +2,9 @@ import React from 'react'
 import { TouchableOpacity, Image, Linking } from 'react-native'
 import PropTypes from 'prop-types'
 
-import { styles } from './styles'
+import { styles } from '../styles'
 
-const FlickrIcon = ({ link }) => {
+const RedditIcon = ({ link }) => {
   return (
     <TouchableOpacity
       activeOpacity={0.8}
@@ -14,14 +14,14 @@ const FlickrIcon = ({ link }) => {
       <Image
         style={styles.image}
         resizeMode="contain"
-        source={require('../../../assets/images/flickr-icon.png')}
+        source={require('../../../../assets/images/reddit-icon.png')}
       />
     </TouchableOpacity>
   )
 }
 
-FlickrIcon.propTypes = {
+RedditIcon.propTypes = {
   link: PropTypes.string.isRequired
 }
 
-export default FlickrIcon
+export default RedditIcon

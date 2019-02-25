@@ -2,7 +2,8 @@ import { StyleSheet, Dimensions } from 'react-native'
 
 export const styles = StyleSheet.create({
   imageContainer: {
-    height: Dimensions.get('window').height * 0.12
+    height: 50,
+    marginBottom: 10
   },
   image: {
     height: '100%',

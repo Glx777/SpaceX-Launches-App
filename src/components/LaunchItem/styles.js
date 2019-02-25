@@ -2,12 +2,12 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
     width: '96%',
     borderRadius: 4,
     borderWidth: 1,
     borderColor: '#222',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginBottom: 20
   },
   missionName: {
     fontSize: 22,

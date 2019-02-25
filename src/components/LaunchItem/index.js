@@ -51,4 +51,4 @@ LaunchItem.propTypes = {
   launch: PropTypes.object.isRequired
 }
 
-export default connect(null)(LaunchItem)
+export default connect()(LaunchItem)

@@ -22,3 +22,13 @@ export const chooseMission = id => ({
   type: 'CHOOSE_MISSION',
   payload: id
 })
+
+export const addShips = ships => ({
+  type: 'ADD_SHIPS',
+  payload: ships
+})
+
+export const chooseShip = id => ({
+  type: 'CHOOSE_SHIP',
+  payload: id
+})

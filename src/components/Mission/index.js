@@ -42,4 +42,4 @@ Mission.propTypes = {
   id: PropTypes.number.isRequired
 }
 
-export default connect(null)(Mission)
+export default connect()(Mission)

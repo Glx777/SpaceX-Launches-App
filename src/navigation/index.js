@@ -11,6 +11,8 @@ import LaunchScreen from '../screens/LaunchScreen'
 import AboutScreen from '../screens/AboutScreen'
 import MissionsScreen from '../screens/MissionsScreen'
 import MissionScreen from '../screens/MissionScreen'
+import ShipsScreen from '../screens/ShipsScreen'
+import ShipScreen from '../screens/ShipScreen'
 
 const HomeScreenStack = createStackNavigator({
   Home: {
@@ -27,6 +29,21 @@ const AboutScreenStack = createStackNavigator({
     screen: AboutScreen,
     navigationOptions: {
       title: 'About'
+    }
+  }
+})
+
+const ShipsScreenStack = createStackNavigator({
+  Ships: {
+    screen: ShipsScreen,
+    navigationOptions: {
+      title: 'Ships'
+    }
+  },
+  Ship: {
+    screen: ShipScreen,
+    navigationOptions: {
+      title: 'Ship Details'
     }
   }
 })
@@ -62,6 +79,15 @@ const MainNavigator = createBottomTabNavigator({
       tabBarLabel: 'Missions',
       tabBarIcon: ({ tintColor }) => (
         <Icon name="tasks" size={30} color={tintColor} />
+      )
+    }
+  },
+  Ships: {
+    screen: ShipsScreenStack,
+    navigationOptions: {
+      tabBarLabel: 'Ships',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="ship" size={30} color={tintColor} />
       )
     }
   },

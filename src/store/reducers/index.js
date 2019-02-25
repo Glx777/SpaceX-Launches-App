@@ -3,7 +3,9 @@ const initialState = {
   launch: {},
   info: {},
   missions: [],
-  mission: {}
+  mission: {},
+  ships: [],
+  ship: []
 }
 
 export const reducers = (state = initialState, action) => {
@@ -25,6 +27,11 @@ export const reducers = (state = initialState, action) => {
       state.mission = state.missions[action.payload]
       return { ...state }
       break
+    case 'ADD_SHIPS':
+      return { ...state, ships: [...action.payload] }
+      break
+    case 'CHOOSE_SHIP':
+      return { ...state, ship: state.ships[action.payload] }
     default:
       return state
   }

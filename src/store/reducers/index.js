@@ -17,15 +17,13 @@ export const reducers = (state = initialState, action) => {
       return { ...state, info: { ...action.payload } }
       break
     case 'CHOOSE_LAUNCH':
-      state.launch = state.launches[action.payload - 1]
-      return { ...state }
+      return { ...state, launch: state.launches[action.payload - 1] }
       break
     case 'ADD_MISSIONS':
       return { ...state, missions: [...action.payload] }
       break
     case 'CHOOSE_MISSION':
-      state.mission = state.missions[action.payload]
-      return { ...state }
+      return { ...state, mission: state.missions[action.payload] }
       break
     case 'ADD_SHIPS':
       return { ...state, ships: [...action.payload] }

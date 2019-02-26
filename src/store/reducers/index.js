@@ -5,7 +5,7 @@ const initialState = {
   missions: [],
   mission: {},
   ships: [],
-  ship: []
+  ship: {}
 }
 
 export const reducers = (state = initialState, action) => {
